@@ -12,5 +12,15 @@ namespace PartyInvites.Controllers {
 			ViewBag.Bitch = "Bitch";
 			return View( );
 		}
+
+		public ActionResult RsvpForm( ) {
+			PartyInvites.Models.GuestResponse gr = new Models.GuestResponse {
+				Name = "Jianyi Liang" ,
+				Email = "liangjianyi.com@outlook.com" ,
+				Phone = "+1 (951)-223-1469"
+			};
+			ViewBag.Guest = gr;
+			return View( );
+		}
 	}
 }
