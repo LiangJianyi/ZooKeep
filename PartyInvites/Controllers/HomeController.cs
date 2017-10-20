@@ -13,6 +13,7 @@ namespace PartyInvites.Controllers {
 			return View( );
 		}
 
+		[HttpGet]
 		public ActionResult RsvpForm( ) {
 			PartyInvites.Models.GuestResponse gr = new Models.GuestResponse {
 				Name = "Jianyi Liang" ,
@@ -21,6 +22,11 @@ namespace PartyInvites.Controllers {
 			};
 			ViewBag.Guest = gr;
 			return View( );
+		}
+
+		[HttpPost]
+		public ActionResult RsvpForm( PartyInvites.Models.GuestResponse gr ) {
+			return View( "Thanks" , gr );
 		}
 	}
 }
